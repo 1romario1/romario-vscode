@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIXEL INTERACT</title>
+    <link rel="icon" href="img/im1.png">
+    <link rel="stylesheet" href="estilos/estiloIndex.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="menu">
+        <img class="logo" src="img/m.gif">
+        <img class="logo2" src="img/m1.gif">
+        <img class="logo3" src="img/c.gif">
+        <h1 class="h">PIXEL STORE</h1>
+        <ul>
+            <li><a class="botonr" href="registro.html">Registro</a></li>
+            <li><a class="botonl" href="login.html">login</a></li>
+        </ul>
+        <h4>welcome</h4>
+    </div>
+    
+    <div class="caja1">
+        <h1>OBTEN NUESTROS ARTICULOS A BUEN COSTO</h1>
+        <img src="img/m2.gif">
+        <img src="img/explocion.gif">
+    </div>
+    <div class="caja2">    
+        <form name="form" class="form">
+        <input type="text" id="buscar">
+        <a href="#" type="button" onclick="buscar()">Buscar</a>
+        </form>
+        <br>
+        <h1>Indaga mas sobre alguna de estas 3 categorias</h1>
+
+    <script>
+        function buscar() {
+            
+            var query = document.querySelectorAll('.form a');
+
+            
+            var busqueda = document.getElementById('buscar');
+
+            var terraria="Terraria"
+
+            
+            if (busqueda.value=="computadoras gamer"||busqueda.value=="Computadores gamer"||busqueda.value=="computadores gamer"||busqueda.value=="computadores"){
+                query.forEach(function(element){
+                    element.href="busquedaComputadores.html"
+                })
+                return true
+            }
+            else if(busqueda.value=="celulares gamer"||busqueda.value=="Celulares gamer"||busqueda.value=="celulares"||busqueda.value=="celular"){
+                query.forEach(function(element){
+                    element.href="busquedaCelulares.html"
+                })
+                return true
+
+            }
+            else if(busqueda.value=="consolas"||busqueda.value=="consola"||busqueda.value=="Consolas"||busqueda.value=="xbox"||busqueda.value=="play station"){
+                query.forEach(function(element){
+                    element.href="busquedaConsolas.html"
+                })
+                return true
+            }
+            else{
+                query.forEach(function(element){
+                    element.href="#"
+                })
+                return false
+            }           
+        }
+         
+    </script>
+    
+    <div id="resultado"></div>
+               
+        <div class="contenido">
+            <figure class="Imagenes">
+                <p>COMPUTADORES GAMER</p>
+                <img src="img/pc.png" alt="imagen de computador">
+            </figure>
+            <figure class="Imagenes">
+                <p>CELULARES</p>
+                <img src="img/celular.png" alt="imagen de celular">
+             </figure>
+            <figure class="Imagenes">
+                <p>CONSOLAS</p>
+                <img src="img/consolas.png" alt="imagen de consolas">
+            </figure>
+    
+        </div>
+    
+    
+    
+    
+    <div class="foot">
+        <img class="img1" src="img/perro.png">
+        <footer>ROMARIO GONZALEZ</footer>
+    </div>
+   
+   
+</body>
+</html>

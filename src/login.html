@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" href="img/im2.png.crdownload">
+    <link rel="stylesheet" href="estilos/estiloLogin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="contenedorr">
+  <div class="main">
+    <h2>Iniciar sesion</h2>
+    <form id="form-id" method="post" name="forms">
+      <input type="text" placeholder="Nombre de usuario:" name="Usuario" id="Usuario" required>
+      <input type="password" placeholder="Contraseña:" name="Usuario" id="Password" required>
+      <input type="button" value="login" id="submit" onclick="validate()">
+    </form>
+  </div>
+</div>
+
+<script>
+  var attempt=3;
+
+  function validate(){
+    var Username=document.getElementById("Usuario").value;
+    var Password=document.getElementById("Password").value;
+
+    if(Username=="Sam" && Password=="12345"){
+      alert("Ingreso exitosamente");
+      window.location="index.html";
+      return false;
+    }
+    else if(Username=="Adriana" && Password=="1234"){
+      alert("Inicio de sesion exitoso");
+      window.location="index.html"
+      return false;
+    }
+    else{
+      attempt--;
+    }
+    alert("No has llenado los campos");
+
+    if(attempt==0){
+      document.getElementById("Usuario").disabled=true;
+      document.getElementById("Password").disabled=true;
+      document.getElementById("submit").disabled=true;
+      return false;
+    }
+  }
+</script>
+</body>
+</html>
